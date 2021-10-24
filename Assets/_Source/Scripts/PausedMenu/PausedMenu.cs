@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VLRTK.Notification;
+using UnityEngine.SceneManagement;
 
 public class PausedMenu : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class PausedMenu : MonoBehaviour
         mbox.AddButton(new ButtonMessageBox("Да", LoadMainMenu , ButtonMessageBox.Type.Fill));
         mbox.Show();
 
-        void LoadMainMenu() { Application.LoadLevel(0); }
+        void LoadMainMenu() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
     }
 
     public void btnManual()
