@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - CustomInputField
     - DragItem
     - DropdownItem
+    - GoToMainMenu
     - InputManager
     - LevelLoader
     - ManualWindow
@@ -22,8 +23,8 @@ ScriptsOnlyBuild:
     - ProgressBar
     - RadialSlider
     - RatingSystem
-    - SceneViewHighlighter.SceneViewOutline
     - SettingsKey
+    - Show_btn
     - Sieves_After_Shaking
     - StepManager
     - SwitchAnim
@@ -143,31 +144,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2938}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3094}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3354}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3458}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 3724}
+      Script: {instanceID: 3726}
     - Class: 114
-      Script: {instanceID: 3932}
+      Script: {instanceID: 3936}
     - Class: 114
-      Script: {instanceID: 4314}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 4340}
+      Script: {instanceID: 4346}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 4558}
     - Class: 114
-      Script: {instanceID: 4838}
+      Script: {instanceID: 4844}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -290,29 +291,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3048}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3106}
     - Class: 114
-      Script: {instanceID: 3262}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 3294}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 3354}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3458}
+      Script: {instanceID: 3460}
     - Class: 114
-      Script: {instanceID: 4030}
+      Script: {instanceID: 3894}
     - Class: 114
-      Script: {instanceID: 4074}
+      Script: {instanceID: 4034}
     - Class: 114
-      Script: {instanceID: 4190}
+      Script: {instanceID: 4078}
     - Class: 114
-      Script: {instanceID: 4294}
+      Script: {instanceID: 4184}
     - Class: 114
-      Script: {instanceID: 20366}
+      Script: {instanceID: 4196}
+    - Class: 114
+      Script: {instanceID: 4300}
+    - Class: 114
+      Script: {instanceID: 18334}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -714,7 +719,7 @@ ScriptsOnlyBuild:
     className: ExampleTrack
   - hash:
       serializedVersion: 2
-      Hash: 897e2a53e6acc5e5f9bdf3242ac0ca8b
+      Hash: dee6439c1dbfc085a2671f8c8e2e8408
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Table
@@ -738,7 +743,7 @@ ScriptsOnlyBuild:
     className: ManualWindow
   - hash:
       serializedVersion: 2
-      Hash: f71cfb27d9e21c5783c3819fbc1e06aa
+      Hash: 30fd144648a9a574722b47b7d61d4608
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StepManager
@@ -772,6 +777,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraZoom
+  - hash:
+      serializedVersion: 2
+      Hash: e2f5077c389a1135ed53e15a41e90e84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pointer_prompt
   - hash:
       serializedVersion: 2
       Hash: c88c4199b288356ec3eb2f0d85abc619
@@ -1008,6 +1019,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 9f271ebb8dd47ee653aeea2cdf25b695
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Show_btn
+  - hash:
+      serializedVersion: 2
       Hash: 105d6ed16fcc2639030f3ee7f0e1fa9d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1083,6 +1100,12 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: GoToMainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: Pestik
   - hash:
       serializedVersion: 2
@@ -1110,7 +1133,7 @@ ScriptsOnlyBuild:
     className: InformationManager
   - hash:
       serializedVersion: 2
-      Hash: e58f00e3fd72e634bc307385a9a07971
+      Hash: 0695fe620b13434ec4da6af9b87955ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InputManager
@@ -1232,4 +1255,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/_Source/Scenes/MainMenu.unity
   - Assets/_Source/Scenes/MainScenes.unity
-  playerPath: C:/Users/lokot/Desktop/Build/PHREZ01.exe
+  playerPath: C:/Users/lokot/Desktop/Build1/GRANSTS01.exe

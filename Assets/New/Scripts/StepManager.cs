@@ -6,6 +6,7 @@ using System.Threading;
 
 public class StepManager : MonoBehaviour
 {
+    
 
     #region variable
 
@@ -28,6 +29,9 @@ public class StepManager : MonoBehaviour
     public GameObject cup7;
     public GameObject cup8;
     public GameObject cup9;
+
+    public GameObject bottom;
+    public GameObject bottom_2;
 
     public GameObject heap100;
 
@@ -67,6 +71,7 @@ public class StepManager : MonoBehaviour
     public GameObject heap305;
     public GameObject heap306;
     public GameObject heap307;
+    public GameObject heap308;
 
     public GameObject cap;
     public GameObject cap1;
@@ -77,13 +82,28 @@ public class StepManager : MonoBehaviour
     public GameObject sieve0_5;
     public GameObject sieve0_25;
     public GameObject sieve0_1;
+    
     public GameObject sieves;
+
+    public GameObject cap_2;
+    public GameObject sieve10_2;
+    public GameObject sieve5_2;
+    public GameObject sieve2_2;
+    public GameObject sieve1_2;
+    public GameObject sieve0_5_2;
+    public GameObject sieve0_25_2;
+    public GameObject sieve0_1_2;
+    
+   
+
 
     public static bool key;
     public static int num;
     public static float timer;
     public static bool even;
     public static int step_count;
+
+
 
 
     #endregion 
@@ -101,6 +121,7 @@ public class StepManager : MonoBehaviour
 
 void Update()
     {
+        
         step = step_count;
         if (!InputManager.isPaused)
         {
@@ -113,6 +134,20 @@ void Update()
                     Step();
                 }
             }
+
+            //ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //if (Physics.Raycast(ray, out hit, 3f))
+            //{
+            //
+            //    if (Input.GetKeyDown(KeyCode.Mouse0))
+            //    {
+            //        hit.collider.gameObject.SetActive(false);
+            //
+            //        step_count++;
+            //    }
+            //
+            //}
+
 
             #region Шаг 1
             if (step_count == 1)
@@ -372,7 +407,7 @@ void Update()
                             hit.collider.gameObject.SetActive(false);
                             shpat1.SetActive(true);
 
-                            step_count++;
+                            step_count=302;
                         }
                     }
                 }
@@ -380,454 +415,31 @@ void Update()
 
             #endregion
 
-            #region Шаг 13
+            
 
-            if (step_count == 13)
+            
+
+            #region Шаг 30.2
+
+            if (step_count == 302)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("cup1"))
+                    if (hit.collider.gameObject.name.Equals("cap"))
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            
+                            cap.SetActive(false);
+                            cap1.SetActive(true);
 
-                            hit.collider.gameObject.SetActive(false);
-                            cup9.SetActive(true);
-
-                            text.SetActive(true);
-
-                            text.GetComponent<TextMesh>().text = "30.1";
-
-
-                            step_count++;
+                            step_count=29;
                         }
                     }
                 }
             }
 
             #endregion
-
-            #region Шаг 14
-
-            if (step_count == 14)
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 3f))
-                {
-                    if (hit.collider.gameObject.name.Equals("cup9"))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-
-
-                            hit.collider.gameObject.SetActive(false);
-                            cup1.SetActive(true);
-
-                            text.SetActive(false);
-                            
-
-
-                            step_count = 29;
-                        }
-                    }
-                }
-            }
-
-            #endregion
-
-            //#region Шаг 15
-            //
-            //if (step_count == 15)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup2"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "30.5";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 16
-            //
-            //if (step_count == 16)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup2.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 17
-            //
-            //if (step_count == 17)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup3"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "31.0";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 18
-            //
-            //if (step_count == 18)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup3.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 19
-            //
-            //if (step_count == 19)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup4"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "35.0";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 20
-            //
-            //if (step_count == 20)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup4.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 21
-            //
-            //if (step_count == 21)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup5"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "31.4";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 22
-            //
-            //if (step_count == 22)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup5.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 23
-            //
-            //if (step_count == 23)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup6"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "30.0";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 24
-            //
-            //if (step_count == 24)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup6.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 25
-            //
-            //if (step_count == 25)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup7"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "81.7";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 26
-            //
-            //if (step_count == 26)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup7.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 27
-            //
-            //if (step_count == 27)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup8"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup9.SetActive(true);
-            //
-            //                text.SetActive(true);
-            //                text.GetComponent<TextMesh>().text = "31.0";
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
-            //
-            //#region Шаг 28
-            //
-            //if (step_count == 28)
-            //{
-            //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    if (Physics.Raycast(ray, out hit, 3f))
-            //    {
-            //        if (hit.collider.gameObject.name.Equals("cup9"))
-            //        {
-            //            if (Input.GetKeyDown(KeyCode.Mouse0))
-            //            {
-            //
-            //
-            //                hit.collider.gameObject.SetActive(false);
-            //                cup8.SetActive(true);
-            //
-            //                text.SetActive(false);
-            //
-            //
-            //
-            //                step_count++;
-            //            }
-            //        }
-            //    }
-            //}
-            //
-            //#endregion
 
             #region Шаг 29
 
@@ -844,120 +456,17 @@ void Update()
 
                             heap6.SetActive(false);
 
-                            heap11.SetActive(true);
-                            
-
-                            step_count++;
-                        }
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Шаг 30
-
-            if (step_count == 30)
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 3f))
-                {
-                    if (hit.collider.gameObject.name.Equals("heap11") || hit.collider.gameObject.name.Equals("cup1"))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-
-
-                            heap11.SetActive(false);
-                            cup1.SetActive(false);
-
-                            heap100.SetActive(true);
-                            cup9.SetActive(true);
-
-                            text.SetActive(true);
-                            text.GetComponent<TextMesh>().text = "35.6";
-
-
-
-                            step_count = 301;
-                        }
-                    }
-                }
-            }
-
-            #endregion
-
-            //------------------------------------------
-            #region 30.1 
-
-            if (step_count == 301)
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 3f))
-                {
-                    if (hit.collider.gameObject.name.Equals("heap100") || hit.collider.gameObject.name.Equals("cup9"))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            heap100.SetActive(false);
-                            cup9.SetActive(false);
-
-                            heap11.SetActive(true);
-                            cup1.SetActive(true);
-
-                            text.SetActive(false);
-
-                            step_count++;
-                        }
-                    }
-                }
-            }
-
-            #endregion 
-
-            #region Шаг 30.2
-
-            if (step_count == 302)
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 3f))
-                {
-                    if (hit.collider.gameObject.name.Equals("cap"))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            cap.SetActive(false);
-                            cap1.SetActive(true);
-
-                            step_count++;
-                        }
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Шаг 30.3
-
-            if (step_count == 303)
-            {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 3f))
-                {
-                    if (hit.collider.gameObject.name.Equals("heap11") || hit.collider.gameObject.name.Equals("cup1"))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            heap11.SetActive(false);
                             heap8.SetActive(true);
 
-                            step_count++;
+
+                            step_count=304;
                         }
                     }
                 }
             }
 
             #endregion
+
 
             #region Шаг 30.4
 
@@ -985,7 +494,7 @@ void Update()
 
             if (step_count == 305)
             {
-                sieves.GetComponent<Animator>().Play("Sieves_Up");// - НЕТ АНИМАЦИИ И ПРОДОЛЖЕНИЯ. ОСТАЛОСЬ СДЕЛАТЬ АНИМАЦИЮ ТРЯСКИ, РАСКИДАТЬ ПО ОСТАЛЬНЫМ ЧАШКАМ
+                sieves.GetComponent<Animator>().Play("Sieves_Up");// - НЕТ АНИМАЦИИ И ПРОДОЛЖЕНИЯ. ОСТАЛОСЬ СДЕЛАТЬ АНИМАЦИЮ ТРЯСКИ, РАСКИДАТЬ ПО ОСТАЛЬНЫМ ЧАШКАМ (done!)
                 
 
                 step_count = 0;
@@ -993,7 +502,7 @@ void Update()
 
             #endregion
 
-            #region 30.6
+            #region Шаг 30.6
 
             if (step_count == 306)
             {
@@ -1012,10 +521,12 @@ void Update()
                             heap305.SetActive(true);
                             heap306.SetActive(true);
                             heap307.SetActive(true);
+                            heap308.SetActive(true);
 
                             cap.SetActive(false);
+                            cap_2.SetActive(true);
 
-                            step_count++;
+                            step_count = 3061;//-------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         }
                     }
                 }
@@ -1023,9 +534,71 @@ void Update()
 
             #endregion
 
-            
 
-            #region 30.7
+
+
+
+
+
+            #region Шаг 30.6.1
+
+            if (step_count == 3061)//---------------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup1"))//----------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "30.1";//--------
+
+
+
+                            step_count = 3062;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.6.2
+
+            if (step_count == 3062)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup1.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 307;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+
+            #region Шаг 30.7
 
             if (step_count == 307)
             {
@@ -1039,7 +612,9 @@ void Update()
                             heap301.SetActive(false);
                             sieve10.SetActive(false);
 
-                            heap22.SetActive(true);
+                            sieve10_2.SetActive(true);
+
+                            heap11.SetActive(true);//--------
 
                             step_count++;
                         }
@@ -1052,6 +627,160 @@ void Update()
             #region Шаг 30.8
 
             if (step_count == 308)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap11") || hit.collider.gameObject.name.Equals("cup1"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            heap11.SetActive(false);
+                            cup1.SetActive(false);
+
+                            heap99.SetActive(true);
+                            cup9.SetActive(true);
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "35.6";
+
+
+
+                            step_count++;
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+
+            #region Шаг 30.9
+
+            if (step_count == 309)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap99") || hit.collider.gameObject.name.Equals("cup9"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+                            heap99.SetActive(false);
+                            cup9.SetActive(false);
+
+                            heap11.SetActive(true);
+                            cup1.SetActive(true);
+
+                            text.SetActive(false);
+
+                            step_count=3091;
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+
+
+
+
+            #region Шаг 30.9.1
+
+            if (step_count == 3091)//---------------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup2"))//----------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "30.5";//--------
+
+
+
+                            step_count = 3092;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.9.2
+
+            if (step_count == 3092)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup2.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 310;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+
+
+
+
+
+
+            #region Шаг 30.10
+
+            if (step_count == 310)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap302") || hit.collider.gameObject.name.Equals("sieve5"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap302.SetActive(false);
+                            sieve5.SetActive(false);
+
+                            sieve5_2.SetActive(true);
+
+                            heap22.SetActive(true);//-----
+
+                            step_count++;
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.11
+
+            if (step_count == 311)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1081,10 +810,9 @@ void Update()
 
             #endregion
 
+            #region Шаг 30.12
 
-            #region Шаг 30.9
-
-            if (step_count == 309)
+            if (step_count == 312)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1102,7 +830,7 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count=30121;
                         }
                     }
                 }
@@ -1110,21 +838,81 @@ void Update()
 
             #endregion
 
-            #region 30.10
 
-            if (step_count == 310)
+            #region Шаг 30.12.1
+
+            if (step_count == 30121)//---------------------
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap302") || hit.collider.gameObject.name.Equals("sieve5"))
+                    if (hit.collider.gameObject.name.Equals("cup3"))//----------
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap302.SetActive(false);
-                            sieve5.SetActive(false);
 
-                            heap33.SetActive(true);//-----
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "31.0";//--------
+
+
+
+                            step_count = 30122;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.12.2
+
+            if (step_count == 30122)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup3.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 313;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.13
+
+            if (step_count == 313)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap303") || hit.collider.gameObject.name.Equals("sieve2"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap303.SetActive(false);//----
+                            sieve2.SetActive(false);//----
+
+                            sieve2_2.SetActive(true);
+
+                            heap33.SetActive(true);//---
 
                             step_count++;
                         }
@@ -1134,9 +922,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.11
+            #region Шаг 30.14
 
-            if (step_count == 311)
+            if (step_count == 314)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1166,9 +954,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.12
+            #region Шаг 30.15
 
-            if (step_count == 312)
+            if (step_count == 315)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1186,7 +974,7 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count=30151;
                         }
                     }
                 }
@@ -1194,19 +982,79 @@ void Update()
 
             #endregion
 
-            #region 30.13
 
-            if (step_count == 313)
+            #region Шаг 30.15.1
+
+            if (step_count == 30151)//---------------------
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap303") || hit.collider.gameObject.name.Equals("sieve2"))
+                    if (hit.collider.gameObject.name.Equals("cup4"))//----------
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap303.SetActive(false);//----
-                            sieve2.SetActive(false);//----
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "35.0";//--------
+
+
+
+                            step_count = 30152;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.15.2
+
+            if (step_count == 30152)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup4.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 316;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region 30.16
+
+            if (step_count == 316)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap304") || hit.collider.gameObject.name.Equals("sieve1"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap304.SetActive(false);//----
+                            sieve1.SetActive(false);//----
+
+                            sieve1_2.SetActive(true);
 
                             heap44.SetActive(true);//---
 
@@ -1218,9 +1066,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.14
+            #region Шаг 30.17
 
-            if (step_count == 314)
+            if (step_count == 317)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1250,9 +1098,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.15
+            #region Шаг 30.18
 
-            if (step_count == 315)
+            if (step_count == 318)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1270,7 +1118,7 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count=30181;
                         }
                     }
                 }
@@ -1278,19 +1126,79 @@ void Update()
 
             #endregion
 
-            #region 30.16
 
-            if (step_count == 316)
+            #region Шаг 30.18.1
+
+            if (step_count == 30181)//---------------------
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap304") || hit.collider.gameObject.name.Equals("sieve1"))
+                    if (hit.collider.gameObject.name.Equals("cup5"))//----------
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap304.SetActive(false);//----
-                            sieve1.SetActive(false);//----
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "31.4";//--------
+
+
+
+                            step_count = 30182;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.18.2
+
+            if (step_count == 30182)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup5.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 319;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region 30.19
+
+            if (step_count == 319)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap305") || hit.collider.gameObject.name.Equals("sieve0.5"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap305.SetActive(false);//----
+                            sieve0_5.SetActive(false);//----
+
+                            sieve0_5_2.SetActive(true);
 
                             heap55.SetActive(true);//---
 
@@ -1302,9 +1210,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.17
+            #region Шаг 30.20
 
-            if (step_count == 317)
+            if (step_count == 320)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1334,9 +1242,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.18
+            #region Шаг 30.21
 
-            if (step_count == 318)
+            if (step_count == 321)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1354,7 +1262,7 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count=30211;
                         }
                     }
                 }
@@ -1362,19 +1270,78 @@ void Update()
 
             #endregion
 
-            #region 30.19
+            #region Шаг 30.18.1
 
-            if (step_count == 319)
+            if (step_count == 30211)//---------------------
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap305") || hit.collider.gameObject.name.Equals("sieve0.5"))
+                    if (hit.collider.gameObject.name.Equals("cup6"))//----------
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap305.SetActive(false);//----
-                            sieve0_5.SetActive(false);//----
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "30.0";//--------
+
+
+
+                            step_count = 30212;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.21.2
+
+            if (step_count == 30212)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup6.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 322;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region 30.22
+
+            if (step_count == 322)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap306") || hit.collider.gameObject.name.Equals("sieve0.25"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap306.SetActive(false);//----
+                            sieve0_25.SetActive(false);//----
+
+                            sieve0_25_2.SetActive(true);
 
                             heap66.SetActive(true);//---
 
@@ -1386,9 +1353,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.20
+            #region Шаг 30.23
 
-            if (step_count == 320)
+            if (step_count == 323)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1418,9 +1385,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.21
+            #region Шаг 30.24
 
-            if (step_count == 321)
+            if (step_count == 324)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1438,7 +1405,7 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count = 30241;
                         }
                     }
                 }
@@ -1446,19 +1413,79 @@ void Update()
 
             #endregion
 
-            #region 30.22
 
-            if (step_count == 322)
+            #region Шаг 30.18.1
+
+            if (step_count == 30241)//---------------------
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap306") || hit.collider.gameObject.name.Equals("sieve0.25"))
+                    if (hit.collider.gameObject.name.Equals("cup7"))//----------
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap306.SetActive(false);//----
-                            sieve0_25.SetActive(false);//----
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "81.7";//--------
+
+
+
+                            step_count = 30242;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.24.2
+
+            if (step_count == 30242)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup7.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 325;//----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region 30.25
+
+            if (step_count == 325)
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("heap307") || hit.collider.gameObject.name.Equals("sieve0.1"))
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+                            heap307.SetActive(false);//----
+                            sieve0_1.SetActive(false);//----
+
+                            sieve0_1_2.SetActive(true);
 
                             heap77.SetActive(true);//---
 
@@ -1470,9 +1497,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.23
+            #region Шаг 30.26
 
-            if (step_count == 323)
+            if (step_count == 326)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1502,9 +1529,9 @@ void Update()
 
             #endregion
 
-            #region Шаг 30.24
+            #region Шаг 30.27
 
-            if (step_count == 324)
+            if (step_count == 327)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1522,7 +1549,69 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            step_count= 33333333;
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+
+            //-----------------------------------------------------------------------------------------------------------------------------------------------------
+            //-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            #region Шаг 30.18.1
+
+            if (step_count == 33333333)//---------------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup8"))//----------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup9.SetActive(true);//------------
+
+                            text.SetActive(true);
+                            text.GetComponent<TextMesh>().text = "31.0";//--------
+
+
+
+                            step_count = 33333334;//-----------
+                        }
+                    }
+                }
+            }
+
+            #endregion
+
+            #region Шаг 30.24.2
+
+            if (step_count == 33333334)//--------------
+            {
+                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 3f))
+                {
+                    if (hit.collider.gameObject.name.Equals("cup9"))//------------------
+                    {
+                        if (Input.GetKeyDown(KeyCode.Mouse0))
+                        {
+
+
+                            hit.collider.gameObject.SetActive(false);
+                            cup8.SetActive(true);//------
+
+                            text.SetActive(false);
+
+
+
+                            step_count = 33333335;//----------
                         }
                     }
                 }
@@ -1532,17 +1621,19 @@ void Update()
 
             #region 30.25
 
-            if (step_count == 325)
+            if (step_count == 33333335)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
                 {
-                    if (hit.collider.gameObject.name.Equals("heap307") || hit.collider.gameObject.name.Equals("sieve0.1"))
+                    if (hit.collider.gameObject.name.Equals("heap308") || hit.collider.gameObject.name.Equals("bottom"))
                     {
                         if (Input.GetKeyDown(KeyCode.Mouse0))
                         {
-                            heap307.SetActive(false);//----
-                            sieve0_1.SetActive(false);//----
+                            heap308.SetActive(false);//----
+                            bottom.SetActive(false);//----
+
+                            bottom_2.SetActive(true);
 
                             heap88.SetActive(true);//---
 
@@ -1556,7 +1647,7 @@ void Update()
 
             #region Шаг 30.26
 
-            if (step_count == 326)
+            if (step_count == 33333336)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1588,7 +1679,7 @@ void Update()
 
             #region Шаг 30.27
 
-            if (step_count == 327)
+            if (step_count == 33333337)
             {
                 ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 3f))
@@ -1606,25 +1697,13 @@ void Update()
 
                             text.SetActive(false);
 
-                            step_count++;
+                            
                         }
                     }
                 }
             }
 
             #endregion
-
-
-            //-----------------------------------------------------------------------------------------------------------------------------------------------------
-            //-----------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
 
         }
 

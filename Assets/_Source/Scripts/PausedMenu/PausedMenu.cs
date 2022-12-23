@@ -44,7 +44,7 @@ public class PausedMenu : MonoBehaviour
         mbox.AddButton(new ButtonMessageBox("Да", LoadMainMenu , ButtonMessageBox.Type.Fill));
         mbox.Show();
 
-        void LoadMainMenu() { SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+        void LoadMainMenu() { SceneManager.LoadScene("MainMenu"); }
     }
 
     public void btnManual()
@@ -54,7 +54,7 @@ public class PausedMenu : MonoBehaviour
 
     public void btnExit()
     {
-        Exit();
+        Application.Quit();
     }
    
     void Menu()

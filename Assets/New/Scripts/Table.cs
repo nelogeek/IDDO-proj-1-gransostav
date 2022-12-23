@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class Table : MonoBehaviour
 {
+    
     public GameObject Cns;
     public Button btn;
-    public GameObject btn1;
+   
     public static bool Key;
     public static bool Jey;
     public static bool Jey2;
     public static bool Key2;
     public static bool Close;
+
 
 
     // Start is called before the first frame update
@@ -39,7 +41,7 @@ public class Table : MonoBehaviour
             {
                 Key = true;
                 Jey = true;
-                btn1.SetActive(false);
+                
                 Cns.GetComponent<Animator>().Play("TableShow");
             }
         }
@@ -62,6 +64,8 @@ public class Table : MonoBehaviour
             Jey = false;
             Key = false;
             Close = false;
+            //btn.GetChild()
+
         }
     }
 
@@ -70,7 +74,7 @@ public class Table : MonoBehaviour
         if (Jey2)
         {
             btn.GetComponentInChildren<Text>().text = ">>";
-            btn1.SetActive(true);
+            
             Jey2 = false;
             Key2 = false;
             Close = true;
